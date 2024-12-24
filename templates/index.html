@@ -1,0 +1,42 @@
+{% extends 'base.html '%}
+
+{% block head %}
+<title>to do list</title>
+{% endblock%}
+
+{% block body %}
+
+    
+    <div class="content">
+        <h1>TO DO LIST APPLICATION </h1>
+        {% if tasks | length <  1%}
+        <h3>there is no task yet create a new one </h3>
+        {% else %}
+    <table>
+        <tr>
+            <td>Task</td>
+            <td>Date</td>
+            <td>Action</td>
+        </tr>
+        {% for task in tasks%}
+        <tr>
+            <th>{{ task.content }}</th>
+            <th>{{ task.create.strftime("%Y-%m-%d")}}</th>
+            <th>
+                <a href="/delete/{{task.id}}">delete</a> <br>
+                <a href="/update/{{task.id}}">update</a> <br>
+                
+
+
+            </th>
+        </tr>
+        {% endfor %}
+       
+    </table>
+    {% endif %}
+    <form action="/" method="post">
+        <input type="text" name="content" id="content">
+        <input type="submit" value=" Add_Task" id="btn">
+    </form>
+    {% endblock %}
+

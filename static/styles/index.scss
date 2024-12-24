@@ -1,0 +1,38 @@
+$primary_color:#007bff;
+$primary_hover_color:#0056b3;
+$success_color:#28a745;
+$success_hover_color:#218838;
+$tittle_color:#333;
+$bg_color:wheat;
+
+.content{
+    max-width: 800px;
+    margin:  50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 00 10px rgba(0, .0, .0, .0.1);
+    text-align: center;
+    h1{
+        color: $primary_hover_color;
+    }
+    h4{
+        color: #666;
+    }
+    table{
+        width: 100%;
+        margin-top: 20px;
+        border-collapse: collapse;
+        th,td{
+            padding: 10px;
+            border: 1px solid #ccc;
+
+        
+        th{
+            background-color: #f0f0f0;
+            color: #333;
+
+        }
+    }
+    }
+}
