@@ -64,6 +64,4 @@ def update(id:int):
 
 
 if __name__ == ("__main_"):
-    with app.app_context():
-        db.create_all()
     app.run(debug=True)
